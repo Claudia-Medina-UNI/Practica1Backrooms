@@ -45,3 +45,11 @@ class RegistroNivelBackrooms:
         print(f"Entidades: {self.__entidades_totales}")
         print(f"Habitable: {estado}")
         print("="*40)
+        
+    def registrar_avistamiento(self):
+        print(f"\n[!] ALERTA: Actividad anómala en {self.__nombre_nivel} [!]")
+        self.__entidades_totales += 5
+        if self.__entidades_totales > 10:
+            self.__clase_seguridad = "Clase 5"
+            self.__habitable = False
+        print(f"Nuevo recuento de entidades: {self.__entidades_totales}")
