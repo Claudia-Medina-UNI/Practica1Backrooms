@@ -30,3 +30,18 @@ class RegistroNivelBackrooms:
         return self.__habitable
     def setHabitable(self, habitable):
         self.__habitable = habitable
+    
+    def info(self):
+        if self.__habitable == True:
+            estado = "[✓] Si es habitable ☻"
+        else:
+            estado = "[✘] NO, PELIGRO, NO ES HABITABLE ☠"
+        print("\n" + "="*40)
+        print("╔═══════════════════════════╗")
+        print("║ ☣︎ SISTEMA DE ARCHIVOS M.E.G ☣︎ ║")
+        print("╚═══════════════════════════╝")
+        print(f"Nivel: {self._numero_nivel} - {self._nombre_nivel}")
+        print(f"Clasificacion: {self.__clase_seguridad}")
+        print(f"Entidades: {self.__entidades_totales}")
+        print(f"Habitable: {estado}")
+        print("="*40)
