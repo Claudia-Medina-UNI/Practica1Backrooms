@@ -53,3 +53,10 @@ class RegistroNivelBackrooms:
             self.__clase_seguridad = "Clase 5"
             self.__habitable = False
         print(f"Nuevo recuento de entidades: {self.__entidades_totales}")
+    
+    def protocolo_purga(self):
+        print("\n[⚙] EJECUTANDO PROTOCOLO DE PURGA...")
+        self.__entidades_totales = 0
+        self.__habitable = True
+        self.__clase_seguridad = "Clase 1"
+        print("Nivel sanitizado el entorno vuelve a ser seguro.")
